@@ -22,26 +22,7 @@
 手机 QQ → 设置 → 通用 → 聊天记录迁移与备份 → 迁移到电脑。
 得到的是 QQ 自己的备份格式，需要先用电脑端打开再导出 txt。
 
-### 方式 C：本机实时拉取（需授权）
-本机若已跑 NapCat（OneBot HTTP），可以直接拉这个账号看得到的会话：
-
-```bash
-# 先确认服务在跑、token 正确
-curl -s -H 'Authorization: Bearer <token>' http://127.0.0.1:3000/get_login_info
-
-# 拉取（必须带 --consent；只拉你本账号可见的记录）
-python3 scripts/qq_fetch.py --user 123456789 --count 100 --consent -o chat.jsonl
-
-# 群聊
-python3 scripts/qq_fetch.py --group 987654321 --count 200 --consent -o chat.jsonl
-```
-
-限制，先跟用户说清楚：
-- 只能拉到**这个机器人账号**在群/好友里看得到的消息
-- 历史条数受服务端限制，太久远的可能拉不到
-- 群聊里第三方很多，**分析时只取你和对方两人的消息**，其余脱敏
-
-### 方式 D：直接粘贴 / 截图
+### 方式 C：直接粘贴 / 截图
 手动复制时，整理成一行一条最省事：
 ```
 我: 你最近是不是很忙

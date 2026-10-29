@@ -57,12 +57,11 @@ metadata:
 
 ## 第二步：要记录、建人设
 
-1. **要记录**（只问一次，给三个选项）：
+1. **要记录**（只问一次，给两个选项）：
    > **A.** 贴文本 / 发截图 / 给我导出文件（推荐）
-   > **B.** 从这台机器的 QQ 实时拉（要你授权，只能拉这个账号看得到的）
-   > **C.** 先不贴，我口述
+   > **B.** 先不贴，我口述
 
-   A → 按 `references/platform-import.md` 导入；B → `scripts/qq_fetch.py --user <QQ> --consent`。
+   A → 按 `references/platform-import.md` 导入；B → 进轻量模式：只做情绪承接 + 澄清问题，不假装分析过记录。
 2. **建人设**：
    ```bash
    python3 scripts/normalize.py 记录.txt -o chat.jsonl --me 我的昵称
@@ -210,4 +209,4 @@ python3 scripts/state.py list
 - `references/platform-import.md` —— QQ / 微信 导入
 - `scripts/persona.py` —— 从记录里提取语气统计与典型台词
 - `scripts/state.py` —— 存档 / 读档 / 温度记录
-- `scripts/normalize.py`、`scripts/stats.py`、`scripts/qq_fetch.py` —— 导入与统计
+- `scripts/normalize.py`、`scripts/stats.py` —— 导入与统计

@@ -23,7 +23,7 @@
 ## Quick start
 
 ```bash
-# 1) 把记录整理成统一 JSONL（QQ txt / 微信 CSV / 粘贴 / 已授权的 QQ 实时拉取）
+# 1) 把记录整理成统一 JSONL（QQ txt / 微信 CSV / 粘贴）
 python3 scripts/normalize.py chat.txt -o chat.jsonl --me 我的昵称
 
 # 2) 抽取语气指纹，生成人设卡草稿
@@ -67,8 +67,7 @@ reconcile/
     ├── normalize.py             # 任意导出 → 统一 JSONL
     ├── persona.py               # 语气统计 + 典型台词
     ├── state.py                 # 存档 / 读档 / 温度
-    ├── stats.py                 # 消息量、延迟、主动性
-    └── qq_fetch.py              # NapCat OneBot 拉取（强制 --consent）
+    └── stats.py                 # 消息量、延迟、主动性
 ```
 
 ## Design notes
