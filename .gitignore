@@ -1,0 +1,13 @@
+# 本地会话数据（可能含真实聊天记录，务必不要提交）
+.reconcile/
+*.jsonl
+chat.jsonl
+persona-draft.md
+persona.md
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
